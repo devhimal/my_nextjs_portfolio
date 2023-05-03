@@ -21,7 +21,7 @@ const Projects = () => {
             <Image
               src="/online_movie_clone.png"
               alt="project_image"
-              className=" opacity-1 group-hover:opacity-10 h-full w-full"
+              className="group-hover:opacity-10"
 
               height={250}
               width={350}
@@ -42,9 +42,7 @@ const Projects = () => {
             <Image
               src="/huddle.png"
               alt="project_image"
-              className=" opacity-1 group-hover:opacity-10 h-full w-full"
-
-              
+              className=" group-hover:opacity-10"
               height={250}
               width={350}
             />
@@ -63,7 +61,7 @@ const Projects = () => {
             <Image
               src="/sukarmi_profile.png"
               alt="project_image"
-              className=" opacity-1 group-hover:opacity-10 h-full w-full"
+              className=" group-hover:opacity-10 h-full w-full"
 
               
               height={250}
