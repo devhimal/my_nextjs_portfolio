@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import MovieClone from "../../../public/assets/online_movie_clone.png";
-import Huddle from "../../../public/assets/huddle.png";
-import Sukarmi from "../../../public/assets/sukarmi_profile.png";
+import Huddle from "../../../public/huddle.png";
+import Sukarmi from "../../../public/sukarmi_profile.png";
 import Link from "next/link";
 
 const Projects = () => {
@@ -19,9 +19,12 @@ const Projects = () => {
         <Link href="https://movie-clone-site.netlify.app/">
           <div className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center w-full h-auto shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
             <Image
-              src={MovieClone}
+              src="/online_movie_clone.png"
               alt="project_image"
-              className=" opacity-1 group-hover:opacity-10 h-full w-full "
+              className=" opacity-1 group-hover:opacity-10 h-full w-full"
+
+              height={250}
+              width={350}
               
             />
             <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
@@ -37,9 +40,13 @@ const Projects = () => {
         <Link href="https://huddle-template-site.netlify.app/">
           <div className="relative rounded-xl h-[250px] w-[350px] flex justify-center items-center w-full h-auto shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
             <Image
-              src={Huddle}
+              src="/huddle.png"
               alt="project_image"
               className=" opacity-1 group-hover:opacity-10 h-full w-full"
+
+              
+              height={250}
+              width={350}
             />
             <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
               <h2 className="capitalize ">#2 Huddle</h2>
@@ -54,9 +61,13 @@ const Projects = () => {
         <Link href="https://sukarmi.com/">
           <div className="relative rounded-xl h-[250px] w-[350px] flex  justify-center items-center w-full h-auto shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
             <Image
-              src={Sukarmi}
+              src="/sukarmi_profile.png"
               alt="project_image"
               className=" opacity-1 group-hover:opacity-10 h-full w-full"
+
+              
+              height={250}
+              width={350}
             />
             <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
               <h2 className="capitalize ">#3 Sukarmi</h2>

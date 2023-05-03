@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from "next/image"
-import Hack from "../../../public/assets/hackcorruption.jpg"
 
 const Hackcorruption = () => {
   return (
@@ -13,7 +12,7 @@ const Hackcorruption = () => {
 Out of the diverse pool of over 60 participants, our team comprises five dedicated members: Richa, Samidha, Sarila, Manisha, and myself. Together, we are prepared to engage in fierce competition and utilize our collective expertise to develop groundbreaking tools that will effectively combat corruption.</p>
         </div>
         <div className='order-1 flex justify-center items-center md:pr-4 pb-6 md:pb-0 w-full md:w-[50%]'>
-            <Image src={Hack} alt="picture" height={300} width={400} />
+            <Image src="/hackcorruption.jpg" alt="picture" height={300} width={400} />
          </div>
     </div>
   )
