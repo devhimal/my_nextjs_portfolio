@@ -6,6 +6,33 @@ import Sukarmi from "../../../public/sukarmi_profile.png";
 import Link from "next/link";
 
 const Projects = () => {
+  let Data = [
+    {
+      id: 1,
+      image: "/online_movie_clone.png",
+      url: "https://movie-clone-site.netlify.app/",
+      title: "#1 Online Movie clone app",
+      description:
+        "I have developed this project utilizing ReactJS and Tailwind CSS, while implementing Redux Thunk middleware to handle the application's state",
+    },
+    {
+      id: 2,
+      image: "/huddle.png",
+      url: "https://huddle-template-site.netlify.app/",
+      title: "#2 Huddle Clone",
+      description:
+        "I cloned the Huddle website using ReactJS, Sass, and Material UI, showcasing my proficiency in these technologies",
+    },
+    {
+      id: 3,
+      image: "/sukarmi_profile.png",
+      url: "https://sukarmi.com/",
+      title: "#3 Sukarmi",
+      description:
+        " Sukarmi: Empowering learning, seamless access to hostels, and job opportunities.",
+    },
+  ];
+
   return (
     <div id="projects" className="w-full min-h-screen px-10 sm:px-20 pb-10">
       <div className="flex flex-col justify-center items-center text-center space-y-6">
@@ -15,68 +42,27 @@ const Projects = () => {
           just a few examples of the projects that I have built.
         </p>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 py-6">
-        <Link href="https://movie-clone-site.netlify.app/">
-          <div className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center w-full h-auto shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
-            <Image
-              src="/online_movie_clone.png"
-              alt="project_image"
-              className="group-hover:opacity-10"
-
-              height={250}
-              width={350}
-              
-            />
-            <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <h2 className="capitalize ">#1 Online Movie clone app</h2>
-              <p className="text-[#fff]">
-                I have developed this project utilizing ReactJS and Tailwind
-                CSS, while implementing Redux Thunk middleware to handle the
-                application's state
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link href="https://huddle-template-site.netlify.app/">
-          <div className="relative rounded-xl h-[250px] w-[350px] flex justify-center items-center w-full h-auto shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
-            <Image
-              src="/huddle.png"
-              alt="project_image"
-              className=" group-hover:opacity-10"
-              height={250}
-              width={350}
-            />
-            <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <h2 className="capitalize ">#2 Huddle</h2>
-              <p className="text-[#fff]">
-                I have developed a straightforward replica of a website called
-                Huddle using ReactJS and Sass as the primary technologies for
-                this project.
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link href="https://sukarmi.com/">
-          <div className="relative rounded-xl h-[250px] w-[350px] flex  justify-center items-center w-full h-auto shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
-            <Image
-              src="/sukarmi_profile.png"
-              alt="project_image"
-              className=" group-hover:opacity-10 h-full w-full"
-
-              
-              height={250}
-              width={350}
-            />
-            <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <h2 className="capitalize ">#3 Sukarmi</h2>
-              <p className="text-[#fff]">
-                Sukarmi is an innovative and user-friendly online educational
-                platform designed to empower individuals in their learning
-                journey while providing seamless access to booking hostels and
-                applying for job opportunities.</p>
-            </div>
-          </div>
-        </Link>
+        {Data.map((items, index) => {
+          return (
+            <Link href="https://movie-clone-site.netlify.app/" key={items.id}>
+              <div className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
+                <Image
+                  src={items.image}
+                  alt={items.title}
+                  className="group-hover:opacity-10"
+                  height={250}
+                  width={350}
+                />
+                <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                  <h2 className="capitalize ">{items.title}</h2>
+                  <p className="text-[#fff]">{items.description}</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
