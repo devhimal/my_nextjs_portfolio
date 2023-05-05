@@ -1,15 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import MovieClone from "../../../public/assets/online_movie_clone.png";
-import Huddle from "../../../public/huddle.png";
-import Sukarmi from "../../../public/sukarmi_profile.png";
 import Link from "next/link";
 
 const Projects = () => {
   let Data = [
     {
       id: 1,
-      image: "/online_movie_clone.png",
+      image: "/online_movie_clone.jpg",
       url: "https://movie-clone-site.netlify.app/",
       title: "#1 Online Movie clone app",
       description:
@@ -17,7 +14,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      image: "/huddle.png",
+      image: "/huddle.jpg",
       url: "https://huddle-template-site.netlify.app/",
       title: "#2 Huddle Clone",
       description:
@@ -25,7 +22,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      image: "/sukarmi_profile.png",
+      image: "/sukarmi_profile.jpg",
       url: "https://sukarmi.com/",
       title: "#3 Sukarmi",
       description:

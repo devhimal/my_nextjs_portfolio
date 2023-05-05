@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from "next/image"
-import Profile from "../../../public/assets/himal.jpg"
 
 const About = () => {
   return (
