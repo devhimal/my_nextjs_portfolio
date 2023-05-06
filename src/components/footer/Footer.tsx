@@ -11,7 +11,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
   return (
-    <div id="footer" className="sticky py-6 bg-black text-[#fff] top-[100%] bottom-0 w-full ">
+    <div id="footer" className="py-6 bg-black text-[#fff] top-[100%] bottom-0 w-full ">
       <div className="flex justify-between px-20">
         <div>
           <p className="border-3 text-2xl text-bold uppercase border-red-950">

@@ -9,7 +9,7 @@ import {FiFigma} from "react-icons/fi"
 
 const Skills = () => {
   return (
-    <div id="skills" className='w-full min-h-screen px-10 md:px-20 xl:px-40 space-y-20'>
+    <div id="skills" className='flex flex-col justify-center w-full min-h-screen px-10 md:px-20 xl:px-40 space-y-20'>
         <div className='flex flex-col items-center text-center'>
             <h1>Skills</h1>
         </div>

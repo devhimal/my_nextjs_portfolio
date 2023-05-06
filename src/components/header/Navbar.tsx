@@ -10,11 +10,12 @@ import {
 } from "react-icons/ai";
 
 const Navbar = () => {
+
   const [nav, setNav] = useState(false);
 
   return (
     <>
-      <div className="sticky w-full h-20 shadow-xl z-[100]">
+      <div className="sticky w-full h-20 bg-transparent z-[100]">
         <div className="flex justify-between items-center w-full h-full px-10 sm:px-15 md:px-20 2xl:px-16">
           <p className="border-3 text-2xl text-bold uppercase border-red-950">
             Himal Tamang
