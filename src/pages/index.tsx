@@ -10,7 +10,7 @@ const index = () => {
   return (
     <>
     <Layout>
-      <Me />
+      {/* <Me /> */}
       <About />
       <Projects />
       <Hackcorruption />

@@ -1,9 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 
+
+const image = "./himaltamang.jpg"
+
 const me = () => {
   return (
-    <div className='w-full h-screen flex justify-center items-center text-center'>
+    <div 
+        className='w-full h-screen flex justify-center items-center text-center'
+       
+    
+    >
         <div className="w-full space-y-2 flex-col mx-auto p-4 sm:p-10 md:p-20 flex justify-center items-center">
                 <p className="text-md text-gray-600 uppercase">Diving more into technology</p>
                 <h1 className='capitalize'>Hi, I'm <span className='text-[orangered] italic'>Himal</span></h1>

@@ -9,14 +9,31 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
+import Me from "../body/Me"
+
 const Navbar = () => {
 
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(false);1
 
   return (
-    <>
-      <div className="sticky w-full h-20 bg-transparent z-[100]">
-        <div className="flex justify-between items-center w-full h-full px-10 sm:px-15 md:px-20 2xl:px-16">
+    <div 
+    style = {{
+      backgroundImage:
+      'url("./background7.jpg")',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      // filter: 'blur(1px)',
+      backgroundColor:"black",
+      // opacity:0.8,
+      height: '100%',
+      width: '100%',
+      border: 'none'
+   }}
+   className="text-[#f0f0f0]"
+    >
+      <div className="sticky w-full h-20 bg-transparent z-[100] abosolute">
+        <div className="flex justify-between bg-transparent items-center w-full h-full px-10 sm:px-15 md:px-20 2xl:px-16">
           <p className="border-3 text-2xl text-bold uppercase border-red-950">
             Himal Tamang
           </p>
@@ -135,7 +152,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+      <Me />
+    </div>
   );
 };
 
