@@ -41,9 +41,9 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 py-6">
-        {Data.map((items, index) => {
+        {Data.map((items) => {
           return (
-            <Link href="https://movie-clone-site.netlify.app/" key={items.id}>
+            <Link href={items.url} key={items.id}>
               <div className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
                 <Image
                   src={items.image}
