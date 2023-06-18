@@ -8,7 +8,7 @@ const Projects = () => {
       id: 1,
       image: "/online_movie_clone.jpg",
       url: "https://movie-clone-site.netlify.app/",
-      title: "#1 Online Movie clone app",
+      title: "Online Movie clone app",
       description:
         "I have developed this project utilizing ReactJS and Tailwind CSS, while implementing Redux Thunk middleware to handle the application's state",
     },
@@ -16,7 +16,7 @@ const Projects = () => {
       id: 2,
       image: "/huddle.jpg",
       url: "https://huddle-template-site.netlify.app/",
-      title: "#2 Huddle Clone",
+      title: "Huddle Clone",
       description:
         "I cloned the Huddle website using ReactJS, Sass, and Material UI, showcasing my proficiency in these technologies",
     },
@@ -24,10 +24,17 @@ const Projects = () => {
       id: 3,
       image: "/sukarmi_profile.jpg",
       url: "https://sukarmi.com/",
-      title: "#3 Sukarmi",
+      title: "Sukarmi",
       description:
         " Sukarmi: Empowering learning, seamless access to hostels, and job opportunities.",
     },
+    {
+      id:4, 
+      image: "/homyz.jpg",
+      url: "https://real-estate-website-clone.vercel.app/",
+      title: "Real Estate Clone",
+      description: "This project has been built using the Vite framework, making it an excellent choice for all real estate agents seeking to provide exceptional service to their customers and expand their client base."
+    }
   ];
 
   return (
@@ -44,7 +51,7 @@ const Projects = () => {
         {Data.map((items) => {
           return (
             <Link href={items.url} key={items.id}>
-              <div className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000">
+              <div className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000 px-2">
                 <Image
                   src={items.image}
                   alt={items.title}
@@ -53,7 +60,7 @@ const Projects = () => {
                   width={350}
                 />
                 <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <h2 className="capitalize ">{items.title}</h2>
+                  <h2 className="capitalize "> # {items.id} {items.title}</h2>
                   <p className="text-[#fff]">{items.description}</p>
                 </div>
               </div>
