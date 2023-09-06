@@ -55,8 +55,8 @@ const Projects = () => {
         {Data.map((items) => {
           return (
            
-              <div key={items.id} className="relative h-[250px] w-[350px] rounded-xl flex justify-center items-center shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000 hover:scale-95 px-2">
-                <img src={items.image} alt=""   className="group-hover:opacity-10 h-full w-full"/>
+              <div key={items.id} className="relative h-[250px] w-[350px] rounded-lg flex justify-center items-center shadow-xl shadow-gray-400 group hover:bg-[orangered] hover:transition-all hover:duration-1000 hover:scale-95 overflow-hidden">
+                <img src={items.image} alt={items.title} className="group-hover:opacity-10 h-full w-full "/>
                 <div className="hidden group-hover:block w-full  text-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                   <h2 className="capitalize "> # {items.id} {items.title}</h2>
                   <p className="text-[#fff]">{items.description}</p>

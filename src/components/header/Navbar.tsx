@@ -13,8 +13,7 @@ import Me from "../body/Me"
 
 const Navbar = () => {
 
-  const [nav, setNav] = useState(false);1
-
+  const [nav, setNav] = useState(false);
   return (
     <div 
     style = {{
@@ -38,7 +37,7 @@ const Navbar = () => {
             Himal Tamang
           </p>
           <div className="flex justify-between items-center space-x-8">
-            <ul className=" hidden md:flex justify-between items-center uppercase border-1 space-x-8">
+            <ul className=" hidden lg:flex justify-between items-center uppercase border-1 space-x-8">
               <Link href="/">
                 <li className="  hover:text-[orangered] hover:transition-all hover:duration-300">
                   Home
@@ -63,7 +62,7 @@ const Navbar = () => {
                 <Link href="#footer">Hire Me</Link>
               </button>
             </ul>
-            <div onClick={() => setNav(!nav)} className="flex md:hidden">
+            <div onClick={() => setNav(!nav)} className="flex lg:hidden">
               <AiOutlineMenu size={28} />
             </div>
           </div>
@@ -92,8 +91,8 @@ const Navbar = () => {
                 </p>
                 <AiOutlineClose
                   onClick={() => setNav(!nav)}
-                  className="cursor-pointer hover:text-[orangered]"
-                  size={25}
+                  className="cursor-pointer text-black hover:text-[orangered]"
+                  size={28}
                 />
               </div>
 
