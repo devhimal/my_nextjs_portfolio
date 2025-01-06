@@ -51,6 +51,7 @@ jobs:
       - name: Deploy to Vercel
         run: npx vercel deploy --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
         if: success()
+        run: echo "Successfully deployed to Vercel"
 
       # Optional Step: Notify failure
       - name: Notify Failure
