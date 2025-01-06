@@ -22,27 +22,27 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "yarn"
+          cache: "npm"
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: yarn install
+        run: npm install
         if: success()
 
       # Step 4: Lint the code
       - name: Run ESLint
-        run: yarn lint
+        run: npm run lint
         if: success()
 
       # Step 5: Build the Next.js application
       - name: Build Next.js app
-        run: yarn build
+        run: npm run build
         if: success()
 
       # Step 6: Test the production build
       - name: Start production server for testing
         run: |
-          yarn start &
+          npm run start &
           sleep 10
           curl -Is http://localhost:3000 | head -n 1
         if: success()
