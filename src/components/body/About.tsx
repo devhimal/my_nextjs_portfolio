@@ -25,7 +25,9 @@ const About = () => {
           development skills, I also have a strong background in Figma design.
           With hands-on experience in creating visually appealing and
           user-friendly interfaces, I bring a holistic approach to web
-          development.
+          development. I am constantly expanding my knowledge in both frontend
+          and design domains to deliver seamless and engaging digital
+          experiences.
         </p>
       </div>
     </div>
