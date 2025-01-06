@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Next.js
+name: Next.js CI/CD Pipeline
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  validate-build-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,17 +27,31 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: yarn install
+        if: success() # Proceed only if previous steps were successful
 
-      # Step 4: Build the application
-      - name: Build Next.js app
-        run: yarn build
+      # Step 4: Validate the code (linting)
+      - name: Run ESLint
+        run: yarn lint
+        if: success() # Proceed only if dependencies installed successfully
 
-      # Step 5: Run tests (if applicable)
+      # Step 5: Run tests
       - name: Run tests
         run: yarn test
+        if: success() || failure() # Run tests even if linting fails
 
-      # Step 6: Deploy to Vercel
+      # Step 6: Build the application
+      - name: Build Next.js app
+        run: yarn build
+        if: success() # Build only if previous steps succeeded
+
+      # Step 7: Deploy to Vercel (Production)
       - name: Deploy to Vercel
         run: npx vercel --prod
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        if: success() # Deploy only if build succeeds
+
+      # Step 8: Notify on Failure
+      - name: Notify Failure
+        if: failure() # Run this step only if any of the previous steps fail
+        run: echo "Workflow failed. Please check the logs and fix errors."
