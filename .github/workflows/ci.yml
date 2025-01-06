@@ -57,4 +57,4 @@ jobs:
       # Step 8: Notify failure (optional step)
       - name: Notify Failure
         if: failure()
-        run: echo "Workflow failed. Please check the logs and fix errors."
+        run: echo "Workflow failed. Please check the logs and fix errors. Yes"
