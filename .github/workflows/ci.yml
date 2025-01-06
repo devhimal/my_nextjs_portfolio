@@ -49,10 +49,10 @@ jobs:
 
       # Step 7: Deploy to Vercel
       - name: Deploy to Vercel
-          run: npx vercel deploy --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel deploy --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
         if: success()
 
-      # Step 8: Notify failure (optional step)
+      # Optional Step: Notify failure
       - name: Notify Failure
         if: failure()
-        run: echo "Workflow failed. Please check the logs and fix errors. Yes"
+        run: echo "Workflow failed. Please check the logs and fix errors."
