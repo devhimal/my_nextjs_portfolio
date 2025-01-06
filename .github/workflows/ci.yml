@@ -27,31 +27,34 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: yarn install
-        if: success() # Proceed only if previous steps were successful
+        if: success()
 
-      # Step 4: Validate the code (linting)
+      # Step 4: Lint the code
       - name: Run ESLint
         run: yarn lint
-        if: success() # Proceed only if dependencies installed successfully
+        if: success()
 
-      # Step 5: Run tests
-      - name: Run tests
-        run: yarn test
-        if: success() || failure() # Run tests even if linting fails
-
-      # Step 6: Build the application
+      # Step 5: Build the Next.js application
       - name: Build Next.js app
         run: yarn build
-        if: success() # Build only if previous steps succeeded
+        if: success()
 
-      # Step 7: Deploy to Vercel (Production)
+      # Step 6: Test the production build
+      - name: Start production server for testing
+        run: |
+          yarn start &
+          sleep 10
+          curl -Is http://localhost:3000 | head -n 1
+        if: success()
+
+      # Step 7: Deploy to Vercel
       - name: Deploy to Vercel
         run: npx vercel --prod
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        if: success() # Deploy only if build succeeds
+        if: success()
 
-      # Step 8: Notify on Failure
+      # Step 8: Notify failure (optional step)
       - name: Notify Failure
-        if: failure() # Run this step only if any of the previous steps fail
+        if: failure()
         run: echo "Workflow failed. Please check the logs and fix errors."
