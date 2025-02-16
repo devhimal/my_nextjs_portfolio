@@ -9,27 +9,23 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-import Me from "../body/Me"
+import Me from "../body/Me";
 
 const Navbar = () => {
-
   const [nav, setNav] = useState(false);
   return (
-    <div 
-    style = {{
-      backgroundImage:
-      'url("./background7.jpg")',
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      // filter: 'blur(1px)',
-      backgroundColor:"black",
-      // opacity:0.8,
-      height: '100%',
-      width: '100%',
-      border: 'none'
-   }}
-   className="text-[#f0f0f0]"
+    <div
+      style={{
+        backgroundImage: 'url("./background7.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "black",
+        height: "100%",
+        width: "100%",
+        border: "none",
+      }}
+      className="text-[#f0f0f0]"
     >
       <div className="sticky w-full h-20 bg-transparent z-[100] abosolute">
         <div className="flex justify-between bg-transparent items-center w-full h-full px-10 sm:px-15 md:px-20 2xl:px-16">
@@ -53,10 +49,13 @@ const Navbar = () => {
                   Projects
                 </li>
               </Link>
-              <Link href="#about">
+              <Link href="about">
                 <li className="  hover:text-[orangered] hover:transition-all hover:duration-300">
                   About Me
                 </li>
+              </Link>
+              <Link href={"/contact"}>
+                <li>Contact Us</li>
               </Link>
               <button className="py-2 px-6 hover:bg-[orangered] hover:transition-all hover:duration-500">
                 <Link href="#footer">Hire Me</Link>
@@ -123,7 +122,6 @@ const Navbar = () => {
                       Contact Me
                     </li>
                   </Link>
-                  
                 </ul>
                 <div className="pt-40">
                   <p className="uppercase tracking-widest text-[orangered] ">
